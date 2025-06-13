@@ -65,68 +65,95 @@
 
   <!-- Conteúdo Principal -->
   <div class="body-index">
-    <div class="container-fluid my-4">
+    <div class="container-fluid my-2">
       <div class="row"> 
-        <div class="col-md-12 ps-1">
-          <div class="formulario-sgo p-3">
-            <h5 class="text-center mb-4">Ponto de Situação Inicial / Reconhecimento NRBQ</h5>
+        <div class="col-md-6 ps-1">
+          <div class="formulario-sgo p-1">
+            <h5 class="text-center mb-2">Ponto de Situação Inicial / Reconhecimento NRBQ</h5>
 
-            <div class="row mb-2 g-4">
-              <div class="col-md-auto d-flex align-items-center">
-                <label for="hrPosit" class="form-label mb-0 flex-shrink-0 bg-estou bold">Hr Posit:</label>
-                <input type="time" class="form-control form-control-sm no-left-border" id="hrPosit" style="width: 160px;" min="0" step="1">
+            <div class="row mb-1 gx-3 gy-2">
+              <!-- Hr Posit -->
+              <div class="col-lg-4 col-md-6 d-flex align-items-center">
+                <label for="hrPosit" class="form-label mb-0 bg-estou bold flex-shrink-0">Hr Posit:</label>
+                <input type="time" class="form-control form-control-sm flex-grow-1 no-left-border" id="hrPosit" min="0" step="1">
               </div>
-              <div class="col-md-auto d-flex align-items-center">
-                <label for="ocorrencia" class="form-label mb-0 flex-shrink-0 bg-estou bold">Ocorr. Nº:</label>
-                <input type="number" class="form-control form-control-sm no-left-border" id="ocorrencia" style="width: 154px" min="0" step="1">
+
+              <!-- Ocorrência Nº -->
+              <div class="col-lg-4 col-md-6 d-flex align-items-center">
+                <label for="ocorrencia" class="form-label mb-0 bg-estou bold flex-shrink-0">Ocorr. Nº:</label>
+                <input type="number" class="form-control form-control-sm flex-grow-1 no-left-border" id="ocorrencia" min="0" step="1">
               </div>
-              <div class="col-md-auto d-flex align-items-center">
-                <label for="canalManobra" class="form-label mb-0 flex-shrink-0 bg-estou bold">Canal Manobra:</label>
-                <input type="number" class="form-control form-control-sm no-left-border" id="canalManobra" style="width: 130px" min="0" step="1">
+
+              <!-- Canal Manobra -->
+              <div class="col-lg-4 col-md-6 d-flex align-items-center">
+                <label for="canalManobra" class="form-label mb-0 bg-estou bold flex-shrink-0">Canal Manobra:</label>
+                <input type="number" class="form-control form-control-sm flex-grow-1 no-left-border" id="canalManobra" min="0" step="1">
               </div>
             </div>
 
-            <div class="d-flex align-items-start gap-2">
-              <h4 class="bg-estou categoria m-0">ESTOU</h4>
+            <div class="estou-bloco position-relative d-flex">
+              <!-- Título rotacionado "ESTOU" -->
+              <h4 class="bg-estou categoria-estou m-0">ESTOU</h4>
 
-              <div class="estou-campos d-flex flex-column gap-2">
+              <!-- Conteúdo dos campos -->
+              <div class="flex-grow-1">
                 <!-- Linha: Local + Freguesia -->
-                <div class="d-flex gap-3">
-                  <div class="d-flex align-items-center">
-                    <label for="local" class="form-label mb-0 bg-estou">Local:</label>
-                    <input type="text" class="form-control form-control-sm no-left-border" id="local" style="width: 282px;">
+                <div class="row g-3">
+                  <!-- Local -->
+                  <div class="col-md-6 d-flex align-items-center">
+                    <label for="local" class="form-label mb-0 ms-5 bg-estou flex-shrink-0">Local:</label>
+                    <input type="text" class="form-control form-control-sm me-2 no-left-border flex-grow-1" id="local">
                   </div>
-                  <div class="d-flex align-items-center">
-                    <label for="freguesia" class="form-label mb-0 bg-estou">Freguesia:</label>
-                    <input type="text" class="form-control form-control-sm no-left-border" id="freguesia" style="width: 282px;">
+
+                  <!-- Freguesia -->
+                  <div class="col-md-6 d-flex align-items-center">
+                    <label for="freguesia" class="form-label mb-0 ms-2 bg-estou flex-shrink-0">Freguesia:</label>
+                    <input type="text" class="form-control form-control-sm no-left-border flex-grow-1" id="freguesia">
                   </div>
                 </div>
 
                 <!-- Linha: Coordenadas + Concelho -->
-                <div class="d-flex gap-3">
-                  <!-- Coordenadas -->
-                  <div class="coordenadas-wrapper d-flex align-items-start gap-4">
-                    <div class="coord-label bg-estou">
-                      <span>Coord:</span>
-                      <span>WGS84</span>
-                    </div>
-                    <div class="coordenadas-inputs d-flex flex-column gap-1">
+                <div class="row g-1 mt-0">
+                  <div class="col-md-12 d-flex align-items-start">
+                    <!-- Coordenadas -->
+                    <label for="coord" class="form-label mb-0 me-2 ms-5 bg-estou flex-shrink-0 concelho">Coord:<br/>WGS84</label>
+                    <div class="d-flex flex-column gap-2 flex-grow-1">
                       <div class="d-flex align-items-center">
-                        <input type="text" class="form-control form-control-sm border-0 border-bottom" id="coordN" placeholder=" ">
+                        <input type="text" class="form-control form-control-sm coord-input border-0 border-bottom" id="coordN">
                         <span class="ms-2 bold">N</span>
                       </div>
                       <div class="d-flex align-items-center">
-                        <input type="text" class="form-control form-control-sm border-0 border-bottom" id="coordW" placeholder=" ">
+                        <input type="text" class="form-control form-control-sm coord-input border-0 border-bottom" id="coordW">
                         <span class="ms-2 bold">W</span>
                       </div>
                     </div>
+                    <!-- Concelho -->
+                     <div class="col-md-6 d-flex ms-4 align-items-center">
+                      <label for="concelho" class="form-label mb-0 bg-estou flex-shrink-0 concelho">Concelho:</label>
+                      <input type="text" class="form-control form-control-sm no-left-border flex-grow-1 concelho" id="concelho">
+                     </div>
                   </div>
+                </div>
 
-                  <!-- Concelho -->
-                  <div class="d-flex flex-column justify-content-center"">
-                    <div class="d-flex align-items-center">
-                      <label for="concelho" class="form-label mb-0 concelho bg-estou">Concelho:</label>
-                      <input type="text" class="form-control form-control-sm no-left-border concelho" id="concelho"">
+                <!-- Linha: Caracterização do Local -->
+                <div class="row g-1 mt-0">
+                  <div class="col-md-12 d-flex align-items-start">
+                    <!-- Caracterização -->
+                    <label for="caracterizacao" class="form-label mb-0 me-2 ms-5 bg-estou flex-shrink-0 caracterizacao-label">Caracterização<br>do Local</label>
+                    <div class="d-flex flex-column gap-0 flex-grow-1">
+                      <div class="form-check">
+                        <input class="form-check-input me-2" type="checkbox" id="viaPublicaCheck">
+                        <label class="form-check-label bg-estou caracterizacao-check-label" for="viaPublicaCheck">Via Pública / Linha Férrea</label>
+                      </div>
+                      <input type="text" class="form-control form-control-sm mt-1 no-left-border caracterizacao-input" id="viaPublicaInput" placeholder="Descrição...">
+                    </div>
+
+                    <div class="d-flex flex-column gap-0 flex-grow-1 ms-2">
+                      <div class="form-check">
+                        <input class="form-check-input me-2" type="checkbox" id="edificioCheck">
+                        <label class="form-check-label bg-estou caracterizacao-check-label" for="edificioCheck">Edifício</label>
+                      </div>
+                      <input type="text" class="form-control form-control-sm mt-1 no-left-border caracterizacao-input" id="edificioInput" placeholder="Descrição...">
                     </div>
                   </div>
                 </div>

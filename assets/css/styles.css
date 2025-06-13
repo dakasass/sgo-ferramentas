@@ -44,7 +44,7 @@ h5 {
   margin-right: 15px;
 }
 .navbar-brand span {
-  color: black;
+  color: #000;
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -69,7 +69,7 @@ footer a {
   background-color: #fefefe;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   border-radius: 0.5rem;
-  width: 50%;
+  width: 100%;
 }
 
 .form-label {
@@ -97,42 +97,26 @@ input.form-control-sm {
   border-left: none !important;
 }
 
-.coordenadas-wrapper {
+/* Coordenadas específicas */
+.coord-wrapper {
   border: 3px solid #333;
-  height: 75px;
-  display: flex;
-  align-items: center;
+  width: 40%; /* pode ajustar para 40% se quiser limitar */
 }
 
-.coord-label {
-  padding: 2px 6px;
-  line-height: 1.2;
-  height: 70px;
+.coord-label.bg-estou {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 60px;
-}
-
-.coord-label.bg-estou {
-  width: 100px;
+  width: 90px;
   height: 70px;
   border: none;
-  border-right: 3px solid #333 !important;
+  border-right: 3px solid !important;
 }
 
-.coordenadas-inputs {
-  padding-right: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.coordenadas-inputs input {
-  border-radius: 0 !important;
-  height: 20px;
-  width: 180px;
+.coord-input {
+  width: 100%;
 }
 
 .concelho {
@@ -145,14 +129,45 @@ input.form-control-sm {
   min-width: 60px;
 }
 
-input.concelho {
-  border-radius: 0 !important;
-  height: 20px;
-  width: 80px !important;
+.caracterizacao-label {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 70px !important;
+  border: none;
+  border-right: 3px solid !important;
 }
 
-.categoria {
-  margin: 77px -77px !important;
+.caracterizacao-check-label {
+  width: 100% !important;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #000;
+}
+
+.caracterizacao-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.caracterizacao-input {
+  border: 3px solid #000;
+  height: 70% !important;
+}
+
+.estou-bloco {
+  position: relative;
+  padding-left: 40px; /* Espaço para o h4 rotacionado */
+}
+
+.categoria-estou {
+  margin: 77px -117px !important;
   transform: rotate(-90deg);
   font-size: 20px;
   font-weight: bold;
@@ -165,16 +180,10 @@ input.concelho {
   text-align: center;
 }
 
-.estou-campos {
-  display: flex;
-  gap: 1.5rem; /* Espaçamento entre os blocos */
-  flex-wrap: wrap;
-}
-
 /* Cores específicas conforme o formulário */
 .bg-estou {
   background-color: #8DB4E2;
-  width: 140px;
+  width: 150px;
   text-align: center;
   border-width: 3px;
   border-style: solid;
@@ -186,7 +195,7 @@ input.concelho {
   color: white;
   width: 140px;
   text-align: center;
-  border: 3px solid black;
+  border: 3px solid #000;
   height: 31px;
 }
 
