@@ -207,7 +207,7 @@ input.form-control-sm {
   border-left: 3px solid;
 }
 
-.categoria-estou {
+.categoria {
   margin: 88px -127px !important;
   transform: rotate(-90deg);
   font-size: 20px;
@@ -222,6 +222,8 @@ input.form-control-sm {
 }
 
 /* Cores específicas conforme o formulário */
+
+/* ESTOU */
 .bg-estou {
   background-color: #8DB4E2;
   width: 150px;
@@ -236,6 +238,7 @@ input.form-control-sm {
   padding-left: 40px; /* Espaço para o h4 rotacionado */
 }
 
+/* VEJO */
 .bg-vejo {
   background-color: #FF3300;
   color: white;
@@ -248,6 +251,25 @@ input.form-control-sm {
 .vejo-bloco {
   position: relative;
   padding-left: 40px; /* Espaço para o h4 rotacionado */
+}
+
+.bg-mercadorias {
+  background-color: #FF7B5B;
+  width: 150px;
+  text-align: center;
+  border-width: 3px;
+  border-style: solid;
+  height: 31px;
+}
+
+.mercadorias-label {
+  height: 100% !important;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
 }
 
 .bg-derrame {
