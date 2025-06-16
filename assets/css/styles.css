@@ -97,28 +97,6 @@ input.form-control-sm {
   border-left: none !important;
 }
 
-/* Coordenadas específicas */
-.coord-wrapper {
-  border: 3px solid #333;
-  width: 40%; /* pode ajustar para 40% se quiser limitar */
-}
-
-.coord-label.bg-estou {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90px;
-  height: 70px;
-  border: none;
-  border-right: 3px solid !important;
-}
-
-.coord-input {
-  width: 100%;
-}
-
 .concelho {
   padding: 2px 6px;
   height: 70px !important;
@@ -182,7 +160,7 @@ input.form-control-sm {
 .align-height {
   display: flex;
   align-items: stretch;
-  height: 30px;
+  height: 31px;
   border: 3px solid;
 }
 
@@ -228,8 +206,7 @@ input.form-control-sm {
   background-color: #8DB4E2;
   width: 150px;
   text-align: center;
-  border-width: 3px;
-  border-style: solid;
+  border: 3px solid;
   height: 31px;
 }
 
@@ -242,46 +219,94 @@ input.form-control-sm {
 .bg-vejo {
   background-color: #FF3300;
   color: white;
-  width: 140px;
+  width: 150px;
   text-align: center;
   border: 3px solid #000;
-  height: 31px;
 }
 
 .vejo-bloco {
   position: relative;
-  padding-left: 40px; /* Espaço para o h4 rotacionado */
+  padding-left: 40px;
 }
 
+/* MERCADORIAS */
 .bg-mercadorias {
   background-color: #FF7B5B;
   width: 150px;
   text-align: center;
-  border-width: 3px;
-  border-style: solid;
+  border: 3px solid;
   height: 31px;
 }
 
-.mercadorias-label {
-  height: 100% !important;
-  width: 90px;
+.mercadorias {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90px;
 }
 
-.bg-derrame {
-  background-color: #fff3cd; /* Amarelo claro (líquido/sólido) */
-  padding: 0.5rem;
-  border-radius: 0.25rem;
+.mercadorias-label {
+  width: 110px !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.bg-explosao {
-  background-color: #e2e3e5; /* Cinzento claro (explosão) */
-  padding: 0.5rem;
-  border-radius: 0.25rem;
+.quantidade {
+  display: flex;
+  height: 100%;
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantidade-input {
+  height: 100% !important;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NATUREZA DO INCIDENTE */
+.bg-incidente {
+  background-color: #FFFF00;
+  width: 150px;
+  text-align: center;
+  border: 3px solid;
+  height: 31px;
+}
+
+.incidente {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.incidente-label {
+  width: 110px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.incidente-check-label {
+  display: flex;
+  align-items: center;
+  justify-content: start !important;
+}
+
+/* Input "Outro" para alinhar com os checkboxes */
+.outro-input {
+  height: 100% !important;
+  border-radius: 0 !important;
+  border: 3px solid;
+  padding: 2px 6px;
 }
 
 /* Loader overlay (usado em index e pedidos) */
