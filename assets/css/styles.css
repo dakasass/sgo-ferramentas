@@ -126,52 +126,93 @@ input.form-control-sm {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 60px;
 }
 
 .caracterizacao-label {
-  height: 100%;
+  height: 100% !important;
+  width: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90px;
-  height: 70px !important;
-  border: none;
-  border-right: 3px solid !important;
 }
 
-.caracterizacao-check-label {
-  width: 100% !important;
-  text-align: center;
+.terreno {
+  height: 45px !important;
+  width: 90px;
+  font-size: 18px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid #000;
 }
 
-.caracterizacao-item {
+.terreno-input {
+  height: 45px !important;
+  width: 80%;
+  padding: 2px 6px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+  align-items: center;
 }
 
-.caracterizacao-input {
-  border: 3px solid #000;
-  height: 70% !important;
+.vegetacao {
+  height: 100% !important;
+  width: 140px !important;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.estou-bloco {
-  position: relative;
-  padding-left: 40px; /* Espaço para o h4 rotacionado */
+.vegetacao-input {
+  height: 45px !important;
+  width: 100%;
+  padding: 2px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Define a mesma altura entre o checkbox e o label seguinte */
+.align-height {
+  display: flex;
+  align-items: stretch;
+  height: 30px;
+  border: 3px solid;
+}
+
+.align-height .form-check-input {
+  height: 100%;
+  width: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: center;
+  border-radius: 0;
+}
+
+.align-height .form-check-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+  text-align: center;
+  padding: 0 8px;
+  border: none;
+  border-left: 3px solid;
 }
 
 .categoria-estou {
-  margin: 77px -117px !important;
+  margin: 88px -127px !important;
   transform: rotate(-90deg);
   font-size: 20px;
   font-weight: bold;
-  width: 200px !important;
+  width: 221px !important;
   height: 45px !important;
 
   display: flex;
@@ -190,6 +231,11 @@ input.form-control-sm {
   height: 31px;
 }
 
+.estou-bloco {
+  position: relative;
+  padding-left: 40px; /* Espaço para o h4 rotacionado */
+}
+
 .bg-vejo {
   background-color: #FF3300;
   color: white;
@@ -197,6 +243,11 @@ input.form-control-sm {
   text-align: center;
   border: 3px solid #000;
   height: 31px;
+}
+
+.vejo-bloco {
+  position: relative;
+  padding-left: 40px; /* Espaço para o h4 rotacionado */
 }
 
 .bg-derrame {
