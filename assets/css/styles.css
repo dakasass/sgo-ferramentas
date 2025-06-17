@@ -292,22 +292,19 @@ input.form-control-sm {
 }
 
 .incidente-label {
-  width: 110px !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.incidente-check-label {
-  display: flex;
-  align-items: center;
-  justify-content: start !important;
+  align-items: start !important;
 }
 
 /* Input "Outro" para alinhar com os checkboxes */
+.incidente-outro-label {
+  width: 84px !important;
+}
+
 .outro-check {
-  width: 40px !important;
+  width: 35px !important;
 }
 
 /* MATÉRIA NÃO IDENTIFICADA */
@@ -318,13 +315,73 @@ input.form-control-sm {
   border: 3px solid;
   height: 31px;
 }
-
 .materia {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.cheiro-label {
+  height: 100%;
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tipo-cheiro-label {
+  position: absolute;
+  width: 150px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #E26B09;
+  z-index: 1;
+  pointer-events: none;
+  border: 3px solid;
+}
+
+.tipo-cheiro-input {
+  height: 136px !important; /* ajuste conforme desejado */
+  border: 3px solid !important;
+  border-radius: 0 !important;
+  resize: none; /* evita redimensionamento manual */
+  padding-top: 1.7rem; /* espaço para o label encaixar */
+}
+
+/* Define a mesma altura entre o checkbox e o label seguinte do Cheiro*/
+.align-cheiro {
+  display: flex;
+  align-items: stretch;
+  height: 31px;
+  flex-grow: 1; /* substitui o width fixo */
+}
+
+.align-cheiro .form-check-input {
+  height: 100%;
+  width: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: center;
+  border-radius: 0;
+  border: 3px solid;
+}
+
+.align-cheiro .form-check-label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 8px;
+  border: 3px solid;
+  border-right: 0;
 }
 
 /* Loader overlay (usado em index e pedidos) */
