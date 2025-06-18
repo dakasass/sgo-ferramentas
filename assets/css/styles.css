@@ -101,6 +101,10 @@ input.form-control-sm {
   border-right: none !important;
 }
 
+.no-bottom-border {
+  border-bottom: none !important;
+}
+
 .concelho {
   padding: 2px 6px;
   height: 70px !important;
@@ -388,27 +392,113 @@ input.form-control-sm {
 }
 
 /* VITIMAS */
+/* Fundo vermelho e borda comum para todas as labels */
 .bg-vitimas {
   background-color: #FF0000;
-  width: 150px;
   text-align: center;
   border: 3px solid;
   height: 31px;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px !important;
 }
 
+/* Label fixa à esquerda ("Vítimas") */
 .vitimas {
+  width: 150px; /* largura reduzida */
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
 }
 
+/* Labels junto aos checkboxes */
 .vitimas-label {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: start !important;
   align-items: start !important;
+  text-align: start !important;
+  height: 31px;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.sintomas-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: none !important;
+  height: 35px; /* aumentar para "fechar" o espaço */
+  padding: 0 8px;
+  margin-bottom: 0; /* garantir que não tenha margem */
+  line-height: 1; /* evitar altura extra da linha */
+}
+
+.sintomas-input {
+  width: 100%;     /* ocupar 100% da largura da coluna */
+  margin-top: 0;   /* sem espaço entre label e input */
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  box-sizing: border-box; /* para incluir padding na largura */
+}
+
+/* CONDIÇÕES METEOROLÓGICAS */
+/* Fundo castanho e borda comum para todas as labels */
+.bg-condicoes {
+  background-color: #D2A171;
+  text-align: center;
+  border: 3px solid;
+  height: 31px;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px !important;
+}
+
+/* Label fixa à esquerda */
+.condicoes {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* Labels ao lado dos inputs */
+.condicoes-label {
+  height: 31px;
+  width: 190px;
+  font-size: 0.8rem;
+}
+
+.condicoes-opcoes {
+  border: 3px solid black;
+  border-left: none;
+  height: 31px;
+}
+
+.condicoes-radio {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-left: 1px solid black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.condicoes-radio:first-child {
+  border-left: none;
+}
+
+.condicoes-row {
+  gap: 0;
 }
 
 /* Loader overlay (usado em index e pedidos) */

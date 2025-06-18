@@ -333,41 +333,129 @@
                 <div class="row g-1 mt-0">
                   <div class="col-md-12 d-flex">
                     <!-- Label fixa à esquerda -->
-                    <label for="vitimas" class="form-label mb-0 ms-5 bg-vitimas flex-shrink-0 vitimas">Vitimas</label>
+                    <label for="vitimas" class="form-label mb-0 ms-5 bg-vitimas flex-shrink-0 vitimas">Vítimas</label>
+
                     <!-- Container à direita -->
                     <div class="d-flex flex-column flex-grow-1 ms-4">
-                      <!-- Primeira linha: Fuga/Incêndio | Derrame/Explosão -->
-                      <div class="d-flex gap-3">
-                        <!-- Coluna 1: Fuga e Incêndio -->
-                        <div class="d-flex flex-column flex-fill">
-                          <div class="form-check align-height">
+
+                      <!-- Linha 1: Nº Vítimas | Leves || Graves | S/Vítimas -->
+                      <div class="d-flex w-100 gap-3">
+                        <div class="d-flex w-50 gap-3">
+                          <div class="form-check align-height w-50">
                             <input class="form-check-input" type="checkbox" id="fugaCheck">
-                            <label class="form-check-label bg-vitimas vitimas-label text-start" for="fugaCheck">Nº Vitimas</label>
+                            <label class="form-check-label bg-vitimas vitimas-label text-start" for="vitimasCheck">Nº Vítimas</label>
                           </div>
-                          <div class="form-check align-height">
-                            <input class="form-check-input" type="checkbox" id="incendioCheck">
-                            <label class="form-check-label bg-vitimas vitimas-label" for="incendioCheck">Leves</label>
+                          <div class="form-check align-height w-50">
+                            <input class="form-check-input" type="checkbox" id="levesCheck">
+                            <label class="form-check-label bg-vitimas vitimas-label" for="levesCheck">Leves</label>
                           </div>
                         </div>
-
-                        <!-- Coluna 2: Derrame e Explosão -->
-                        <div class="d-flex flex-column flex-fill">
-                          <div class="form-check align-height">
-                            <input class="form-check-input" type="checkbox" id="derrameCheck">
-                            <label class="form-check-label bg-vitimas vitimas-label" for="derrameCheck">Graves</label>
+                        <div class="d-flex w-50 gap-3">
+                          <div class="form-check align-height w-50">
+                            <input class="form-check-input" type="checkbox" id=""gravesCheck">
+                            <label class="form-check-label bg-vitimas vitimas-label" for="gravesCheck">Graves</label>
                           </div>
-                          <div class="form-check align-height">
-                            <input class="form-check-input" type="checkbox" id="explosaoCheck">
-                            <label class="form-check-label bg-vitimas vitimas-label" for="explosaoCheck">S/Vitimas</label>
+                          <div class="form-check align-height w-50">
+                            <input class="form-check-input" type="checkbox" id="semVitimas">
+                            <label class="form-check-label bg-vitimas vitimas-label" for="semVitimas">S/Vítimas</label>
                           </div>
                         </div>
                       </div>
 
-                      <!-- Segunda linha: Outro + input -->
-                      <div class="d-flex align-items-center align-height">
-                        <input class="form-check-input outro-check" type="checkbox" id="outroCheck">
-                        <label class="form-check-label bg-vitimas vitimas-outro-label" for="outroCheck">Outro:</label>
-                        <input type="text" class="form-control form-control-sm no-right-border flex-grow-1" id="outroTexto">
+                      <!-- Linha 2: labels Principais Sintomas e N Mortos lado a lado -->
+                      <div class="d-flex w-100 gap-3 mt-1">
+                        <div class="d-flex align-items-center w-50">
+                          <label class="form-check-label bg-vitimas w-100 sintomas-label">Principais Sintomas</label>
+                        </div>
+
+                        <div class="form-check align-height w-50 d-flex align-items-center">
+                          <input class="form-check-input" type="checkbox" id="nmortosCheck">
+                          <label class="form-check-label bg-vitimas vitimas-label w-100 text-start" for="nmortosCheck">N Mortos</label>
+                        </div>
+                      </div>
+
+                      <!-- Linha 3: input principal, ocupa toda largura disponível -->
+                      <div class="w-100">
+                        <input type="text" class="form-control form-control-sm sintomas-input" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-1 mt-0">
+                  <div class="col-md-12 d-flex">
+                    <!-- Label fixa à esquerda -->
+                    <label for="condicoes" class="form-label mb-0 ms-5 bg-condicoes flex-shrink-0 condicoes">
+                      Condições<br>Meteorológicas
+                    </label>
+
+                    <!-- Container à direita da label -->
+                    <div class="d-flex flex-column flex-grow-1 ms-4 w-100">
+                      <div class="row g-3">
+                        <!-- Coluna: Cheiro, Cor, Origem -->
+                        <div class="col-12 col-md-6 d-flex flex-column gap-1">
+                          <!-- Direção do Vento -->
+                          <div class="d-flex align-items-center">
+                            <label for="cheiro" class="form-label mb-0 bg-condicoes flex-shrink-0 condicoes-label">Direção do Vento</label>
+                            <input type="text" class="form-control form-control-sm no-left-border flex-grow-1 cor-input" id="cor">
+                          </div>
+
+                          <!-- Intensidade -->
+                          <div class="d-flex align-items-center condicoes-row">
+                            <label for="intensidade" class="form-label mb-0 bg-condicoes flex-shrink-0 condicoes-label">Intensidade</label>
+                            <div class="condicoes-opcoes d-flex">
+                              <label class="form-check-label condicoes-radio me-1">
+                                <input type="radio" name="intensidade" class="form-check-input me-1" />
+                                f
+                              </label>
+                              <label class="form-check-label condicoes-radio">
+                                <input type="radio" name="intensidade" class="form-check-input me-1" />
+                                M
+                              </label>
+                              <label class="form-check-label condicoes-radio">
+                                <input type="radio" name="intensidade" class="form-check-input me-1" />
+                                F
+                              </label>
+                            </div>
+                          </div>
+
+                          <!-- Velocidade -->
+                          <div class="d-flex align-items-center">
+                            <label for="velocidade" class="form-label mb-0 bg-condicoes flex-shrink-0 condicoes-label">Velocidade</label>
+                            <input type="number" class="form-control form-control-sm flex-grow-1 no-left-border no-right-border" id="velocidade" min="0" step="1">
+                            <label for="intensidade" class="form-label mb-0 bg-condicoes bg-transparent no-left-border flex-shrink-0">km/h</label>
+                          </div>
+                        </div>
+
+                        <!-- Segunda Metade -->
+                        <div class="col-12 col-md-6 d-flex flex-column gap-1">
+                          <!-- Estado Céu -->
+                          <div class="d-flex align-items-center">
+                            <label for="cheiro" class="form-label mb-0 bg-condicoes flex-shrink-0 condicoes-label">Estado Céu</label>
+                            <input type="text" class="form-control form-control-sm no-left-border flex-grow-1 cor-input" id="cor">
+                          </div>
+
+                          <!-- Temperatura -->
+                          <div class="d-flex align-items-center">
+                            <label for="temperatura" class="form-label mb-0 bg-condicoes flex-shrink-0 condicoes-label">Temperatura</label>
+                            <input type="number" class="form-control form-control-sm flex-grow-1 no-left-border no-right-border" id="temperatura" min="0" step="1">
+                            <label for="temperatura" class="form-label mb-0 bg-condicoes bg-transparent no-left-border flex-shrink-0">ºC</label>
+                          </div>
+
+                          <!-- Precipitação -->
+                          <div class="d-flex align-items-center condicoes-row">
+                            <label for="precipitacao" class="form-label mb-0 bg-condicoes flex-shrink-0 condicoes-label">Precipitação</label>
+                            <div class="condicoes-opcoes d-flex">
+                              <label class="form-check-label condicoes-radio me-1">
+                                <input type="radio" name="precipitacao" class="form-check-input me-1" />
+                                Sim
+                              </label>
+                              <label class="form-check-label condicoes-radio">
+                                <input type="radio" name="precipitacao" class="form-check-input me-1" />
+                                Não
+                              </label>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
