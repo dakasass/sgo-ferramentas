@@ -193,18 +193,42 @@ input.form-control-sm {
   border-left: 3px solid;
 }
 
-.categoria {
-  margin: 88px -127px !important;
+.categoria-estou {
+  width: 40px !important; /* largura do bloco vertical */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+
+}
+
+.estou-text {
   transform: rotate(-90deg);
+  transform-origin: center;
+  white-space: nowrap;
   font-size: 20px;
   font-weight: bold;
-  width: 221px !important;
-  height: 45px !important;
+  margin: 0 !important;
+}
 
+.categoria-vejo {
+  width: 40px !important; /* largura do bloco vertical */
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+
+}
+
+.vejo-text {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 !important;
 }
 
 /* Cores específicas conforme o formulário */
@@ -215,12 +239,6 @@ input.form-control-sm {
   width: 150px;
   text-align: center;
   border: 3px solid;
-  height: 31px;
-}
-
-.estou-bloco {
-  position: relative;
-  padding-left: 40px; /* Espaço para o h4 rotacionado */
 }
 
 /* VEJO */
@@ -230,11 +248,6 @@ input.form-control-sm {
   width: 150px;
   text-align: center;
   border: 3px solid #000;
-}
-
-.vejo-bloco {
-  position: relative;
-  padding-left: 40px;
 }
 
 /* MERCADORIAS E SUBSTÂNCIAS PERIGOSAS */
@@ -473,7 +486,7 @@ input.form-control-sm {
 /* Labels ao lado dos inputs */
 .condicoes-label {
   height: 31px;
-  width: 190px;
+  width: 44% !important;
   font-size: 0.8rem;
 }
 
@@ -481,10 +494,12 @@ input.form-control-sm {
   border: 3px solid black;
   border-left: none;
   height: 31px;
+  width: 100%;
 }
 
 .condicoes-radio {
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 0 12px;
@@ -497,8 +512,69 @@ input.form-control-sm {
   border-left: none;
 }
 
-.condicoes-row {
-  gap: 0;
+/* AUTORIDADE */
+/* Fundo cinzento escuro e borda comum para todas as labels */
+.bg-autoridade {
+  background-color: #A6A6A6;
+  text-align: center;
+  border: 3px solid;
+  height: 31px;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px !important;
+}
+
+/* Label fixa à esquerda */
+.autoridade {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Labels ao lado dos inputs */
+.autoridade-label {
+  height: 31px;
+  font-size: 0.8rem;
+}
+
+.grupo-metade {
+  flex: 1;
+  min-width: 0; /* para evitar overflow */
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: nowrap;  /* importante para não quebrar linha */
+    align-items: center;
+    gap: 1rem;
+  }
+
+.autoridade-opcoes {
+  border: 3px solid black;
+  border-left: none;
+  height: 31px;
+  width: 100%;
+}
+
+.autoridade-radio {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-left: 1px solid black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.autoridade-radio:first-child {
+  border-left: none;
 }
 
 /* Loader overlay (usado em index e pedidos) */

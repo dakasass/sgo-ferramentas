@@ -91,9 +91,11 @@
               </div>
             </div>
 
-            <div class="estou-bloco position-relative d-flex mb-1">
-              <!-- Título rotacionado "ESTOU" -->
-              <h4 class="bg-estou categoria m-0">ESTOU</h4>
+            <div class="estou-bloco d-flex">
+              <!-- Título vertical "ESTOU" -->
+              <div class="categoria-estou bg-estou d-flex justify-content-center align-items-center">
+                <span class="estou-text">ESTOU</span>
+              </div>
 
               <!-- Conteúdo dos campos -->
               <div class="flex-grow-1">
@@ -101,7 +103,7 @@
                 <div class="row g-3">
                   <!-- Local -->
                   <div class="col-md-6 d-flex align-items-center">
-                    <label for="local" class="form-label mb-0 ms-5 bg-estou flex-shrink-0">Local:</label>
+                    <label for="local" class="form-label mb-0 ms-2 bg-estou flex-shrink-0">Local:</label>
                     <input type="text" class="form-control form-control-sm me-2 no-left-border flex-grow-1" id="local">
                   </div>
 
@@ -116,7 +118,7 @@
                 <div class="row g-1 mt-0">
                   <div class="col-md-12 d-flex align-items-start">
                     <!-- Coordenadas -->
-                    <label for="coord" class="form-label mb-0 me-2 ms-5 bg-estou flex-shrink-0 concelho">Coord:<br/>WGS84</label>
+                    <label for="coord" class="form-label mb-0 me-2 ms-2 bg-estou flex-shrink-0 concelho">Coord:<br/>WGS84</label>
                     <div class="d-flex flex-column gap-2 flex-grow-1">
                       <div class="d-flex align-items-center">
                         <input type="text" class="form-control form-control-sm border-0 border-bottom" id="coordN">
@@ -139,7 +141,7 @@
                 <div class="row g-1 mt-0">
                   <div class="col-md-12 d-flex align-items-start">
                     <!-- Caracterização -->
-                    <label for="caracterizacao" class="form-label mb-0 me-4 ms-5 bg-estou flex-shrink-0 caracterizacao-label">Caracterização<br>do Local</label>
+                    <label for="caracterizacao" class="form-label mb-0 me-4 ms-2 bg-estou flex-shrink-0 caracterizacao-label">Caracterização<br>do Local</label>
                     <div class="d-flex flex-column gap-0 flex-grow-1">
                       <div class="form-check align-height">
                         <input class="form-check-input" type="checkbox" id="viaPublicaCheck">
@@ -162,7 +164,7 @@
                 <div class="row g-1 mt-0">
                   <div class="col-md- d-flex align-items-start">
                     <!-- Tipo de Terreno -->
-                    <label for="terreno" class="form-label mb-0 me-4 ms-5 bg-estou flex-shrink-0 terreno">Tipo Terreno</label>
+                    <label for="terreno" class="form-label mb-0 me-4 ms-2 bg-estou flex-shrink-0 terreno">Tipo Terreno</label>
                     <div class="d-flex flex-column gap-0 flex-grow-1">
                       <input type="text" class="form-control form-control-sm flex-grow-1 terreno-input" id="terreno">
                     </div>
@@ -177,16 +179,18 @@
             </div>
 
             
-            <div class="vejo-bloco position-relative d-flex mu">
-              <!-- Título rotacionado "VEJO" -->
-              <h4 class="bg-vejo categoria m-0">VEJO</h4>
+            <div class="vejo-bloco d-flex mt-1">
+              <!-- Título vertical "VEJO" -->
+              <div class="categoria-vejo bg-vejo d-flex justify-content-center align-items-center">
+                <span class="vejo-text">VEJO</span>
+              </div>
 
               <!-- Conteúdo dos campos -->
               <div class="flex-grow-1">
                 <div class="row mt-0">
                   <div class="col-md-12 d-flex flex-column flex-md-row">
                     <!-- Label fixa à esquerda -->
-                    <label for="mercadorias" class="form-label mb-0 ms-0 ms-md-5 bg-mercadorias flex-shrink-0 mercadorias">
+                    <label for="mercadorias" class="form-label mb-0 ms-0 ms-md-2 bg-mercadorias flex-shrink-0 mercadorias">
                       Mercadorias e<br>Substâncias<br>Perigosas
                     </label>
 
@@ -226,7 +230,7 @@
                 <div class="row g-1 mt-0">
                   <div class="col-md-12 d-flex">
                     <!-- Label fixa à esquerda -->
-                    <label for="incidente" class="form-label mb-0 ms-5 bg-incidente flex-shrink-0 incidente">
+                    <label for="incidente" class="form-label mb-0 ms-2 bg-incidente flex-shrink-0 incidente">
                       Natureza do<br>Incidente
                     </label>
                     <!-- Container à direita -->
@@ -270,7 +274,7 @@
                 <div class="row g-1 mt-0">
                   <div class="col-md-12 d-flex">
                     <!-- Label fixa à esquerda -->
-                    <label for="materia" class="form-label mb-0 ms-5 bg-materia flex-shrink-0 materia">
+                    <label for="materia" class="form-label mb-0 ms-2 bg-materia flex-shrink-0 materia">
                       Matéria não<br>Identificada -<br/>Suspeita NRBQ
                     </label>
 
@@ -333,7 +337,7 @@
                 <div class="row g-1 mt-0">
                   <div class="col-md-12 d-flex">
                     <!-- Label fixa à esquerda -->
-                    <label for="vitimas" class="form-label mb-0 ms-5 bg-vitimas flex-shrink-0 vitimas">Vítimas</label>
+                    <label for="vitimas" class="form-label mb-0 ms-2 bg-vitimas flex-shrink-0 vitimas">Vítimas</label>
 
                     <!-- Container à direita -->
                     <div class="d-flex flex-column flex-grow-1 ms-4">
@@ -384,7 +388,7 @@
                 <div class="row g-1 mt-0">
                   <div class="col-md-12 d-flex">
                     <!-- Label fixa à esquerda -->
-                    <label for="condicoes" class="form-label mb-0 ms-5 bg-condicoes flex-shrink-0 condicoes">
+                    <label for="condicoes" class="form-label mb-0 ms-2 bg-condicoes flex-shrink-0 condicoes">
                       Condições<br>Meteorológicas
                     </label>
 
@@ -400,7 +404,7 @@
                           </div>
 
                           <!-- Intensidade -->
-                          <div class="d-flex align-items-center condicoes-row">
+                          <div class="d-flex align-items-center">
                             <label for="intensidade" class="form-label mb-0 bg-condicoes flex-shrink-0 condicoes-label">Intensidade</label>
                             <div class="condicoes-opcoes d-flex">
                               <label class="form-check-label condicoes-radio me-1">
@@ -442,7 +446,7 @@
                           </div>
 
                           <!-- Precipitação -->
-                          <div class="d-flex align-items-center condicoes-row">
+                          <div class="d-flex align-items-center">
                             <label for="precipitacao" class="form-label mb-0 bg-condicoes flex-shrink-0 condicoes-label">Precipitação</label>
                             <div class="condicoes-opcoes d-flex">
                               <label class="form-check-label condicoes-radio me-1">
@@ -460,6 +464,39 @@
                     </div>
                   </div>
                 </div>
+                <div class="row g-1 mt-0">
+                  <div class="col-md-12 container-flex">
+                    <!-- Label fixa à esquerda -->
+                    <label for="autoridade" class="form-label mb-0 ms-2 bg-autoridade autoridade">Autoridade</label>
+
+                    <!-- Grupo Local (50% do espaço) -->
+                    <div class="d-flex align-items-center grupo-metade">
+                      <label for="local" class="form-label mb-0 ms-2 bg-autoridade flex-shrink-0 autoridade-label">No Local</label>
+                      <div class="autoridade-opcoes d-flex">
+                        <label class="form-check-label autoridade-radio me-3">
+                          <input type="radio" name="local" class="form-check-input me-1" />
+                          S
+                        </label>
+                        <label class="form-check-label autoridade-radio">
+                          <input type="radio" name="local" class="form-check-input me-1" />
+                          N
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Grupo GNR e PSP (50% do espaço) -->
+                    <div class="d-flex align-items-center gap-3 grupo-metade">
+                      <div class="form-check align-height">
+                        <input class="form-check-input" type="checkbox" id="gnrCheck">
+                        <label class="form-check-label bg-autoridade autoridade-label w-100" for="gnrCheck">GNR</label>
+                      </div>
+                      <div class="form-check align-height">
+                        <input class="form-check-input" type="checkbox" id="pspCheck">
+                        <label class="form-check-label bg-autoridade autoridade-label w-100" for="pspCheck">PSP</label>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
               </div>
             </div>
           </div>
